@@ -1,0 +1,289 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #131722;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.current-time {
+    background-color: #28a745;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* กำหนดคอลัมน์ */
+    gap: 60px; /* เพิ่มระยะห่างระหว่างช่อง */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* ปรับระยะห่างของการ์ด */
+.card {
+    width: 240px; /* เพิ่มขนาดการ์ดเล็กน้อย */
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.15);
+    margin: 5px; /* เพิ่มระยะขอบ */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.close-btn {
+    cursor: pointer;
+    color: white;
+}
+
+/* Card Colors */
+.blue { background-color: #1E90FF; }
+.yellow { background-color: #FFD700; }
+.purple { background-color: #8A2BE2; }
+
+/* Time Display */
+.time {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* ขยายขนาดและจัดตำแหน่งข้อความ "การ์ดใหม่" */
+.title-large {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ช่องวางลิงก์รูปภาพ */
+.image-url {
+    width: 50%;
+    height: 50px;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card-header {
+    position: relative;
+}
+
+.card-index {
+    position: absolute;
+    top: -8px;
+    left: -74px;
+    background: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(34, 197, 94, 0.95); /* ✅ สีเขียวอ่อน */
+    color: white;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 9999;
+}
+
+.queue-number {
+    position: absolute;
+    top: 5px;
+    left: -70px;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+
+
+
+/* ปรับแต่งรูปภาพที่อัปโหลด */
+/* ปรับขนาดรูปภาพให้พอดีกับช่อง */
+/* ปรับขนาดรูปภาพให้พอดีกับการ์ด */
+.card-image {
+    width: 80%; /* ทำให้รูปภาพไม่เกินขนาดการ์ด */
+    max-height: 150px; /* จำกัดความสูงของรูปภาพ */
+    object-fit: cover; /* ปรับรูปให้พอดีกับพื้นที่ โดยไม่บิดเบี้ยว */
+    border-radius: 8px;
+    display: block;
+    margin: 5px auto;
+}
+
+.save-all-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#clear-all-btn{
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.save-all-btn:hover {
+    background-color: #218838;
+}
+
+
+/* กำหนดให้การ์ดมีขนาดเท่ากัน */
+.card {
+    width: 240px; /* ขนาดการ์ดคงที่ */
+    height: 330px; /* กำหนดความสูงให้เท่ากัน */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+/* ปรับให้ปุ่มและเนื้อหาอยู่ตรงกลาง */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ปุ่มลบรูป */
+.remove-image-btn {
+    display: block;
+    margin: 5px auto;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* ปรับสไตล์ให้ชื่อการ์ดอยู่ตรงกลางและใหญ่ขึ้น */
+.card-title {
+    font-size: 22px; /* ขยายขนาดตัวอักษร */
+    font-weight: bold;
+    cursor: pointer;
+    display: block; /* ให้ข้อความเป็นบล็อกเพื่อให้จัดกึ่งกลางได้ */
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+    padding: 10px 0; /* เพิ่มพื้นที่รอบข้อความ */
+    width: 100%; /* ทำให้ข้อความกว้างเท่ากับการ์ด */
+}
+
+.card-title:hover {
+    color: #ffcc00; /* เปลี่ยนสีเมื่อเอาเมาส์ไปชี้ */
+}
+
+/* ปรับ input ให้ดูดีขึ้นเมื่อแก้ไขชื่อ */
+.title-input {
+    font-size: 20px; /* ขนาดตัวอักษรเมื่อแก้ไข */
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    width: 100%;
+    text-align: center; /* ให้ตัวอักษรอยู่ตรงกลาง */
+}
+
+
+/* ช่องสำหรับวางรูป */
+.image-input {
+    width: 95%;
+    height: 25px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* ทำให้รูปแสดงแทนช่องใส่ลิงก์ */
+.image-container img + .image-input {
+    display: none;
+}
+
+
+
+
+/* Buttons */
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.start-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-time-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

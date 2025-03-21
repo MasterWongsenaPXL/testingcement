@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
+</head>
+<body>
+<div class="top-bar">
+    <button class="add-btn" onclick="addNewCard()">เพิ่มบล็อก</button>
+    <button onclick="saveAllCards()" class="save-all-btn">เซฟทั้งหมด</button>
+    <button id="clear-all-btn" style="background-color: red; color: white;">ล้างข้อมูลทั้งหมด</button>
+    <input type="file" id="imageUpload" style="display:none;" accept="image/*">
+    <div class="current-time" id="current-time">00:00:00 น.</div>
+</div>
+
+<div class="grid-container" id="card-container">
+    <!-- การ์ดจะถูกเพิ่มที่นี่โดย JavaScript -->
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
